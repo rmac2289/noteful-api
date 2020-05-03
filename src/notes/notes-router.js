@@ -46,7 +46,7 @@ notesRouter
         .catch(next)
     })
     notesRouter
-        .route(':note_id')
+        .route('/:note_id')
         .all((req, res, next) => {
             NotesService.getById(
                 req.app.get('db'),
